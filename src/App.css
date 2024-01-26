@@ -1,0 +1,59 @@
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: #1c1c1c;
+}
+
+.container {
+  margin: 300px 700px;
+}
+
+.outline-rec {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  height: 400px;
+  border-radius: 4%;
+	background: linear-gradient(-60deg, orange, #1c1c1c, #1c1c1c, orange);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.main-rec {
+  text-align: center;
+  width: 590px;
+  height: 390px;
+  border-radius: 4%;
+  background: #2e2e2e;
+}
+
+.content {
+  padding: 100px;
+}
+
+.main-placeholder {
+  width: 400px;
+}
+
+.btn-container {
+  margin-top: 70px;
+}
+
+.btn {
+  width: 250px;
+  height: 50px;
+}
