@@ -1,4 +1,33 @@
 body {
+  background-color: #313233;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container {   
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  flex-direction: column;
+}
+
+.main-placeholder {
+  padding: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+
+/* body {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -42,10 +71,12 @@ body {
 }
 
 .content {
+  align-items: center;
   padding: 100px;
 }
 
 .main-placeholder {
+  padding-top: 20px; 
   width: 400px;
 }
 
@@ -56,4 +87,4 @@ body {
 .btn {
   width: 250px;
   height: 50px;
-}
+} */

@@ -1,41 +1,22 @@
-import './App.css'
-import { TextField } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import { orange } from '@mui/material/colors';
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Home from "../components/Home/Home.jsx";
+import Navigation from "../components/Navigation/Navigation.jsx";
+import Main from "../components/Main/Main.jsx";
+import Admin from "../components/AdminPanel/Admin.jsx";
+import AdminAddNews from "../components/AdminPanel/AdminAddNews.jsx";
+import NavAdmin from "../components/AdminPanel/NavAdmin.jsx";
+import EditNews from "../components/AdminPanel/EditNews.jsx";
 
-
-const ColorButton = styled(Button)(({ theme }) => ({
-  color: theme.palette.getContrastText(orange[500]),
-  backgroundColor: orange[500],
-  '&:hover': {
-    backgroundColor: orange[400],
-  },
-}));
-
-
-function App() {
+export default function App() {
   return (
-    <>
-      <div className='container'>
-        <div className='outline-rec'>
-          <div className='main-rec'>
-            <div className='content'>
-              <TextField sx={{ input: { color: "white", fontSize: "26px" }}} 
-                         variant='standard' label="ФИО:" 
-                         color="warning" className='main-placeholder' focused />
-              
-              <div className='btn-container'>
-                <ColorButton variant="contained" className='btn'>
-                  Генерировать код
-                </ColorButton>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
+    <Routes> 
+      <Route path="/" element={<Home />} />
+      <Route path="/main" element={<Main />} />
+      <Route path="/admin" element={<NavAdmin />} />
+      <Route path="/admin/users" element={<Admin />} />
+      <Route path="/admin/addnews" element={<AdminAddNews />} />
+      <Route path="/admin/addnews/editnews/:id" element={<EditNews />} />
+    </Routes>
+  );
 }
-
-export default App
